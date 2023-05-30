@@ -1,0 +1,200 @@
+Full Stack 
+===================
+Front end  client + Backend server with db
+html css js ts  + core java,servlets,jsp,springboot and restfulwebservice
+
+Language
+==========
+commuication between humans
+
+Programming Language
+==================
+between machines
+Pop                                      Oop
+B,BCPL,COBOL,C                           c++,java,python,.net,etc
+1)Performance issues                    1)Performance=inheritance,polymorphism
+2)Security                              2)Security=Abstraction,Encapsulation
+
+Java
+1)Platform Independent=windows,mac=wora write once run anywhere
+2)Garbage Collection=
+
+java 
+=============
+James Ghosling in 1995 at sunmicrosystems oracle corp
+
+Oak jdk 1.0
+
+java 17=2024 
+
+java 8 =2030
+
+Desktop app
+vlc 
+
+Distributed app
+gmail ,whatsup
+
+ jee=desktop+distributed
+ jse=desktop apps
+ jme=andriod apps
+ 
+ Jdk ==Java development kit
+ jre =it will provide runtime environment
+ Jvm(java virtual machine)
+ 
+ jdk 8
+ 
+ .java 
+ 
+ Compilation
+ 
+ user defined into machine understandable
+ .java=.class 
+ user understandable lang=machine understandable lang
+ source code = byte code
+ 
+ javac filename.java 
+ 
+ java filename
+ 
+ Core Java 
+ ==============
+ 53 keywords
+ 51 ,goto ,const
+ 
+ all the keywords are in lower case
+ class must be started with Uppercase
+ 
+ class AgeOfTwo,(Ageoftwo)
+ 
+ Identifier
+ ============
+  a name in java
+  a-z
+  A-Z
+  0-9
+  $,_
+  
+  123Hello       invalid
+  Hello World     Invalid
+  $_$_$_            valid
+  
+  Variable
+  =============
+  name of the memory location
+  
+  1+2
+  
+  syntax:
+  datatype varname=value;
+  int hashmi=123;
+  
+  Datatypes
+  primitive              non premitive=string ,arrays
+ 8 Dt
+
+byte=1byte 0-256
+ short int long=integers
+float double=floating numbers
+char boolean 
+10 keywords
+
+Decision Making Statements
+if 
+if else
+if else if
+nested
+switch,break,continue,default
+
+Operators
+============
+unary operators
+int a=20;
+a++
+post incr=a++ 20,21
+pre =++a 22,22
+arithmetic 
++,-,/,*,%
+shift(n*2^a)
+<<
+10<<2 10*2^2=40
+10<<3  
+
+
+
+ >> (n/2^a)
+ 10>>2 =2
+20>>2 
+ 
+ 
+ 
+ 
+relational
+>,<,=>=,<=
+bitwise
+a=10,b=20,c=30;
+if(c>b & c>a)
+
+logical
+
+
+ternary
+int a=10,b=20
+
+(a>b)?a:b;
+assignment
+a=10;
+a+=20//a=a+20=30
+a-=10//20
+
+Flow control statements
+
+  *       1        A
+  **      23      BC
+  
+  Packages in java
+  A folder in java
+  predefined ,userdefined
+java.lang
+javac -d . HelloWorld.java compilation
+java com.b1.has.java.HelloWorld
+
+
+Eclipse download
+
+
+Variables
+
+Local:we can use them within the method
+
+  and Global with in the class but outside the method
+  
+  Instance variables and Static Variable
+  
+  1)Syntax
+  if it is static variable you can specify static keyword
+  
+  2)Memory
+  
+  if it is static variable it will allocated memory only once at the time of class loading into jvm
+  
+  if it is instance variable it will allocated memory for every object creation
+  
+  class logical existence and object physical existence and instance of class 
+  
+  types of cars
+  
+  ObjectName obj=new ObjectName();
+  
+  3)Access
+  objname
+  
+  static 
+  dirctly/class/obj
+
+4)common propety  static 
+unique instance
+
+methods and jvm arch
+oops
