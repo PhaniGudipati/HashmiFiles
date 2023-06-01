@@ -196,5 +196,179 @@ Local:we can use them within the method
 4)common propety  static 
 unique instance
 
-methods and jvm arch
-oops
+Method
+=================
+Method is a block of statements
+
+public/private/protected/default void     
+accessmodifier variablename returntype methodname(list of args){
+
+
+body
+
+
+}
+
+JVM architecture
+
+CLSS
+
+Bootstrap loader rt jar
+
+app class loader
+
+MEMORY AREA
+
+EXECUTION ENGINE
+
+ 
+local    when , how ,where stack
+
+
+instance when , how ,where  heap 
+
+
+static   when,  how ,where memory arae
+
+
+OOPS
+===============
+Class 
+
+Object
+
+Pillars of oops
+1)Inheritance
+2)Abstraction
+3)Polymorphism
+4)Encapsulation
+
+Inheritance
+=================
+Acquiring the properties from parent class,super class to child class,sub class
+Code Reusability
+
+package org.com.oops;
+
+class A{
+	int a=100;
+	public void addition() {
+		int  a=10;
+		int b=20;
+		System.out.println(a+b);
+	}
+	
+}
+class D extends A{
+	int x=300;
+	public void div(int a, int b) {
+		System.out.println(a/b);
+		
+	}
+	
+}
+class B extends D{
+	int d=2000;
+	public static int mul() {
+		int a=100;
+		int b=2;
+		return a*b;
+	}
+}
+
+public class InheritanceEx extends B{
+	int c=300;
+	public void sub(int a,int b) {
+		System.out.println(a-b);
+	}
+
+	public static void main(String[] args) {
+	InheritanceEx in=new InheritanceEx();
+	System.out.println(in.a);
+	in.addition();
+	System.out.println(in.c);
+	in.sub(100, 50);
+	
+	System.out.println(B.mul());
+
+	}
+
+}
+
+====================
+extends and implements
+
+class A{
+
+1000 methods 
+}
+class B extends A
+{
+
+10 methods =1010 methods
+
+}
+
+Types 
+
+single level
+multi level 
+hirarchical 
+hybrid
+multiple in :is not supported in java at class level but it will support at interface
+
+
+interface A{              interface B{
+
+void add():               void add():
+							
+
+}                      }
+
+class C implements A,B{
+main()
+{
+C c=new C();
+c.add
+}
+}
+
+
+Concrete method:Method with Body/implementation
+
+abstract method:Method without body/implementation
+
+public void addition();
+
+class :a group of only concrete methods 
+
+
+abstract class:concrete method + abstract method
+
+
+interface:only abstract method
+
+
+
+Abstraction:
+Hiding the internals by showcasing their functionality
+
+abstract class 0-100
+interface 100
+interface A{
+
+public void add();
+
+}
+interface B extends A{
+
+public void sub();
+}
+
+
+
+
+
+
+
+
