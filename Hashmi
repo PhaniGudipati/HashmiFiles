@@ -365,6 +365,90 @@ interface B extends A{
 public void sub();
 }
 
+Polymorphism
+============================
+ManyForms
+
+1)CompileTime/MethodOverLoading:Method name is same but signature is different
+                                                        no of args,type of args,order of args
+													Type promotion in java
+
+2)RunTime/MethodOverriding:Method name is same but implementation is different 
+
+Constructor
+=======================
+a special member function which gets called when you want to allocate instanteneous memory for objects
+
+Classname obj=new Classname(); 
+default constructor ,no args const
+parameterized constructor
+
+final : final before variable,class,method
+
+this :this is used to represent current class properties
+
+super :this is used to represent parent class properties
+
+thissuperex
+=========================
+package org.com.oops;
+class Parent{
+	int a=123;
+	Parent(){
+		System.out.println("Parent class Default constrictor");
+		
+	}
+	public void m1() {
+		System.out.println("am from parent class m1 method");
+	}
+}
+
+public class ThisSuperExa extends Parent {
+	int a=234;
+ ThisSuperExa() {
+		System.out.println(this.a);
+		System.out.println(super.a);
+		this.m1();
+		super.m1();
+	}
+ ThisSuperExa(String name){
+	 
+	 this();
+	 System.out.println("param const" + name);
+ }
+ public void m1() {
+	 System.out.println("am from child class  "+super.a+a);
+}
+
+	public static void main(String[] args) {
+		ThisSuperExa obj=new ThisSuperExa();
+		System.out.println(obj.a);
+		ThisSuperExa obj2=new ThisSuperExa("Phani");
+		
+
+	}
+
+}
+
+AccessModifiers
+
+public 
+
+private
+
+protected 
+
+default
+
+
+Encapsulation:
+
+Binding up off data(variables) and methods together
+
+getters and setters
+
+
+
 
 
 
