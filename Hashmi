@@ -448,6 +448,24 @@ Binding up off data(variables) and methods together
 getters and setters
 
 
+String
+============is non primitive datatype
+collection of charcters
+
+String animal="dog";//literal 
+String animal=new String("dog");
+immutable
+
+string buffer  synchronised and string builder are mutable asynchronised
+public void synchronized add(){
+
+}//at a time only one thread ,thread safety,performance poor
+
+public void add(){
+
+//performance will better,no thread safety
+}
+
 
 
 
