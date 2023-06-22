@@ -523,4 +523,57 @@ sop(a[1]);
 int a[][]={{10,20},{30,40}}
 
 try catch,multiple try catch,try with multiple catch,mutliple try with catch
+throw,throws
 
+for creating user defined exceptions
+1)make your class as child to the Exception
+2)create param constructor in your class
+
+
+
+Collection
+FRamework=readymade
+
+Arrays are fixed in size
+Arrays are allow only homogeneous
+Arrays not have any predefined methods
+
+
+variable in the size
+both homogenneous/heterogeneous
+utility methods
+
+
+compareTo=java.Lang.Comparable class
+
+compare=java.util.Comparator interface
+ex
+
+public class SetEx {
+
+	public static void main(String[] args) {
+		ReverseOrder r = new ReverseOrder();
+		TreeSet<String> h = new TreeSet<String>(r);
+
+		h.add("Hello");// syso(hello.compareTo(Raghav))
+		h.add("Raghav");
+		h.add("Phani");
+		h.add("Kumar");
+		h.add("Abhi");
+		System.out.println(-"Hello".compareTo("Raghav"));
+		System.out.println(h);
+		Iterator itr = h.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+}
+
+class ReverseOrder implements Comparator<String> {
+	@Override
+	public int compare(String a, String b) {
+		return -a.compareTo(b);
+
+	}
+
+}
