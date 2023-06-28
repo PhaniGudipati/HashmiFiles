@@ -577,3 +577,67 @@ class ReverseOrder implements Comparator<String> {
 	}
 
 }
+
+MultiTasking
+====================
+
+ProcessBased MultiTasking
+All the tasks are executed simultaneously where each task is independent of each other
+ex:Laptop
+
+
+
+
+Thread Based MultiTasking,MultiTreading
+ex:All the Threads are executed simultaneously where each task is related that process
+Notepad++
+
+
+class A{
+1
+2=one process
+3
+4
+
+
+1000
+}
+
+
+1)Runnable Interface==Fi =SAM
+run()
+
+2)Thread class
+
+
+yeild()
+
+
+T1=6
+
+T2=5
+
+T3=4
+
+InterThread Communication,synchronized,wait()
+
+
+class A{
+2 methods 
+
+
+
+}
+
+File io
+
+input(write)  output(read)
+File
+File Writer
+Buffered Writer
+Print Writer
+File Reader,Buffered Reader
+
+Serialization and deserializarion
+
+Serialization is the process of converting java code into byte code
