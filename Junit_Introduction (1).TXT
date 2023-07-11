@@ -1,0 +1,303 @@
++junit:
+------
+
+
+unit : a piece of code is called unit(method,class,variable)
+
+junit is technology to test a piece of code ,developer ensure that
+the code is working as we excepted.
+
+
+
+junit is a widely used in industry and can be used for standalone
+java programs
+
+
+
+
+@Test
+public void method() :The Test annotation indicates that the public void method to which it is attached can be run as a test case.
+
+@Before
+public void method(): The Before annotation indicates that this method must be executed before each test in the class, so as to execute some preconditions necessary for the test.
+
+@BeforeClass
+public static void method(): The BeforeClass annotation indicates that the static method to which is attached must be executed once and before all tests in the class. That happens when the test methods share computationally expensive setup (e.g. connect to database).
+
+
+JUnit annotations
+------------------------
+
+@After
+public void method(): The After annotation indicates that this method gets executed after execution of each test (e.g. reset some variables after execution of every test, delete temporary variables etc)
+
+@AfterClass
+public static void method() : The AfterClass annotation can be used when a method needs to be executed after executing all the tests in a JUnit Test Case class so as to clean-up the expensive set-up (e.g disconnect from a database). Attention: The method attached with this annotation (similar to BeforeClass) must be defined as static.
+
+@Ignore
+public static void method(): The Ignore annotation can be used when you want temporarily disable the execution of a specific test. Every method that is annotated with @Ignore won’t be executed.
+
+
+Example:
+------------
+
+import static org.junit.Assert.*;
+import java.util.*;
+import org.junit.*;
+
+public class AnnotationsTest {
+
+	private ArrayList testList;
+
+	@BeforeClass
+	public static void onceExecutedBeforeAll() {
+		System.out.println("@BeforeClass: onceExecutedBeforeAll");
+	}
+
+	@Before
+	public void executedBeforeEach() {
+		testList = new ArrayList();
+		System.out.println("@Before: executedBeforeEach");
+	}
+
+	@AfterClass
+	public static void onceExecutedAfterAll() {
+		System.out.println("@AfterClass: onceExecutedAfterAll");
+	}
+
+	@After
+	public void executedAfterEach() {
+		testList.clear();
+		System.out.println("@After: executedAfterEach");
+	}
+
+	@Test
+	public void EmptyCollection() {
+		assertTrue(testList.isEmpty());
+		System.out.println("@Test: EmptyArrayList");
+
+	}
+
+	@Test
+	public void OneItemCollection() {
+		testList.add("oneItem");
+		assertEquals(1, testList.size());
+		System.out.println("@Test: OneItemArrayList");
+	}
+
+	@Ignore
+	public void executionIgnored() {
+
+		System.out.println("@Ignore: This execution is ignored");
+	}
+}
+
+output:-
+---------
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+@Test: EmptyArrayList
+@After: executedAfterEach
+@Before: executedBeforeEach
+@Test: OneItemArrayList
+@After: executedAfterEach
+@AfterClass: onceExecutedAfterAll
+
+
+
+---------------
+
+JUnit assertions
+******************
+we will present a number of assertion methods. All those methods are provided by the Assert class which extends the class java.lang.Object and they are useful for writing tests so as to detect failures. In the table below there is a more detailed explanation of the most commonly used assertion methods.
+
+Assertion				                                Description
+-------------						---------------
+
+void assertEquals([String message],			
+expected value, actual value)			Asserts that two values are equal. Values might be type 					of int, short, long, byte, char or java.lang.Object. 
+					The first argument is an optional String message.
+
+
+void assertTrue([String message],
+	boolean condition)			Asserts that a condition is true.
+
+
+void assertFalse([String message],
+	boolean condition)			Asserts that a condition is false.
+
+
+void assertNotNull([String message],
+	 java.lang.Object object)		Asserts that an object is not null.
+
+
+void assertNull([String message], 
+	java.lang.Object object)		Asserts that an object is null.
+
+void assertSame([String message],
+ java.lang.Object expected, 			Asserts that the two objects refer to the same object.
+	java.lang.Object actual)	
+
+
+void assertNotSame([String message],
+ java.lang.Object unexpected,			Asserts that the two objects do not refer to the 			 java.lang.Object actual) 				same  object.
+
+
+
+void assertArrayEquals([String message],                Asserts that the array expected and the resulted array 	expectedArray, resultArray)		are equal. The type of Array might be int, long, short, 					char, byte or java.lang.Object.
+ 
+
+Examples:
+-------------
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class AssertionsTest {
+
+	@Test
+	public void test() {
+		String obj1 = "junit";
+		String obj2 = "junit";
+		String obj3 = "test";
+		String obj4 = "test";
+		String obj5 = null;
+		int var1 = 1;
+		int var2 = 2;
+		int[] arithmetic1 = { 1, 2, 3 };
+		int[] arithmetic2 = { 1, 2, 3 };
+
+		assertEquals(obj1, obj2);
+
+		assertSame(obj3, obj4);
+
+		assertNotSame(obj2, obj4);
+
+		assertNotNull(obj1);
+
+		assertNull(obj5);
+
+		assertTrue(var1  var2);
+
+		assertArrayEquals(arithmetic1, arithmetic2);
+	}
+
+}
+
+note:
+------
+In the class above we can see how these assert methods work:
+
+1. The assertEquals() method will return normally if the two compared objects are equal, otherwise a failure          will be displayed in the JUnit window and the test will abort.
+2. The assertSame() and assertNotSame() methods tests if two object references point to exactly the same      object.
+3. The assertNull() and assertNotNull() methods test whether a variable is null or not null.
+4. The assertTrue() and assertFalse() methods tests if a condition or a variable is true or false.
+5. The assertArrayEquals() will compare the two arrays and if they are equal, the method will proceed without     errors. Otherwise, a failure will be displayed in the JUnit window and the test will abort.
+
+
+
+Ex:2
+-------
+import java.util.Arrays;
+
+public class FirstDayAtSchool {
+
+	public String[] prepareMyBag() {
+		String[] schoolbag = { "Books", "Notebooks", "Pens" };
+		System.out.println("My school bag contains: "
+				+ Arrays.toString(schoolbag));
+		return schoolbag;
+	}
+
+	public String[] addPencils() {
+		String[] schoolbag = { "Books", "Notebooks", "Pens", "Pencils" };
+		System.out.println("Now my school bag contains: "
+				+ Arrays.toString(schoolbag));
+		return schoolbag;
+	}
+}
+
+testCase for Ex2:
+-----------------------
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class FirstDayAtSchoolTest {
+	FirstDayAtSchool school = new FirstDayAtSchool();
+	String[] bag1 = { "Books", "Notebooks", "Pens" };
+	String[] bag2 = { "Books", "Notebooks", "Pens", "Pencils" };
+
+	@Test
+	public void testPrepareMyBag() {
+		System.out.println("Inside testPrepareMyBag()");
+		assertArrayEquals(bag1, school.prepareMyBag());
+	}
+
+	@Test
+	public void testAddPencils() {
+		System.out.println("Inside testAddPencils()");
+		assertArrayEquals(bag2, school.addPencils());
+	}
+}
+
+
+
+
+Creating suite tests:
+----------------------------
+
+we will see how to create suite tests. A test suite is a collection of some test cases from different classes that can be run all together using @RunWith and @Suite annotations.
+
+This is very helpful if you have many test classes and you want to run them all together instead of running each test one at a time.
+
+When a class is annotated with @RunWith, JUnit will invoke the class in which is annotated so as to run the tests, instead of using the runner built into JUnit.
+
+Based on the classes of the previous sections, we can create two test classes. 
+
+The one class will test the public method prepareMyBag() and the other test class will test the method addPencils(). Hence, we will eventually have the classes below:
+
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({ PrepareMyBagTest.class, AddPencilsTest.class })
+public class SuitTest {
+
+}
+
+
+Run JUnit tests from command line:
+-----------------------------------------------
+
+You can run your JUnit test outside Eclipse, by using the org.junit.runner.JUnitCore class. 
+
+This class provides the runClasses() method which allows you to execute one or several test classes. 
+The return type of runClasses() method is an object of the type org.junit.runner.Result. 
+This object can be used to collect information about the tests. Also, in case there is a failed test, you can use the object org.junit.runner.notification.
+Failure which holds description of the failed tests.
+The procedure below shows how to run your test outside Eclipse.
+
+Create a new Java class named JunitRunner.java with the following code:
+--------------------------------------------------------------------------------------------------
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class JunitRunner {
+
+	public static void main(String[] args) {
+
+		Result result = JUnitCore.runClasses(AllTests.class);
+		for (Failure fail : result.getFailures()) {
+			System.out.println(fail.toString());
+		}
+		if (result.wasSuccessful()) {
+			System.out.println("All tests finished successfully...");
+		}
+	}
+}
+
+
