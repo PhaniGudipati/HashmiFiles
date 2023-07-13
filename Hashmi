@@ -641,3 +641,37 @@ File Reader,Buffered Reader
 Serialization and deserializarion
 
 Serialization is the process of converting java code into byte code
+
+
+
+
+
+example with fi no of deafult methods and static methods
+
+
+
+Object ===javap java.lang.Object
+
+
+Junit
+
+Databasems
+===============
+
+
+How we can communicate with database
+
+RDBMS
+Sql=structured query Lang
+
+DDL =Data Defination Lang=create ,drop, alter ,truncate
+DML=Data Manipulation Lang=insert,update,delete
+DCL=data control lang
+Grant,revoke
+TCL=transaction control lang =[commit,rollback
+DQL=select
+
+mysql,postgres,oracle
+
+
+Joints ,constraints
