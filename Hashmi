@@ -674,4 +674,97 @@ DQL=select
 mysql,postgres,oracle
 
 
-Joints ,constraints
+Joins ,constraints
+
+
+notnull
+
+unique 
+
+primary
+
+
+foreign 
+
+
+check 
+
+default
+
+
+
+joins
+
+join ,left ,right 
+
+t1   t2
+
+ JDBC api===java database connectivity api JSE uses drivers 
+ 
+ 
+ Loading the driver class
+ 
+ create the connection
+ 
+ 
+ create the statement for the connection
+ 
+ execute the query
+ 
+ close the connection
+ 
+ Disadvantages with JDBC
+ Bioler Plate code  performance issues 
+ Exception Handling
+ Queries  Jdbc db dependent
+ 
+ JPA java persistence Api is a specification
+ Orm -Object RElational Mapping hibernate,EclipseLink,TopLink,MyBatis=implementation
+ class name == Table name ,variable=field
+ persistence entity
+ 
+ Spring =2003,jsf,structs
+ =============
+ It is a non invasive framework which is used to create light weight and loosely coupled applications.
+ invasive/non invasive
+ non invasive :it will not force the programmers to implement predefined apis
+ 
+ servlet:xyz extends GenericServlet=6*100=600,Implements Servlet,extends HttpServelet=11*100=1100
+ 
+ 
+ 
+ light weight /heavy weight 
+ 
+ 
+ 
+ 
+ loosely /tightly
+ 
+ Class A{
+ 
+ display()
+ 
+ 
+ 
+ }
+ class B{
+ 
+ hello()
+ {
+ A a=new A();
+ a.display();
+ }
+ main()
+ B b=new B();
+ }
+ 
+ Container :maintain the life cycle of an object
+ BeanFactory-small scale apps,ApplicationContext-
+ xml/annotation/java annotation 
+ framework of all framework 
+ 20 modules
+ ioc/dependenecy injection
+ 
+ setter/constructor
+ 
+ autowiring
